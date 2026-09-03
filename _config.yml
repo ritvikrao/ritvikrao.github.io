@@ -103,7 +103,7 @@ talkmap_link             : false      #change to true to add link to talkmap on 
 # placeholder message while it's not ready yet, false to show the real content.
 coming_soon:
   publications            : true
-  talks                   : true
+  talks                   : false
   cv                       : true
 
 comments:

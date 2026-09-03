@@ -1,22 +1,22 @@
 var addressPoints = [
   [
-    "Talk 2 on Relevant Topic in Your Field<br />London School of Testing; London, UK",
-    51.4893335,
-    -0.14405508452768728
+    "Overview of Reconverse<br />JLESC 2026; Julich, DE",
+    50.9094501,
+    6.4052444
   ],
   [
-    "Tutorial 1 on Relevant Topic in Your Field<br />UC-Berkeley Institute for Testing Science; Berkeley, CA, USA",
-    37.8708393,
-    -122.272863
+    "Runtime Adaptivity for CSE and Machine Learning with Charm4Py, CharmTyles, and CharmNumerics<br />JLESC 2026; Julich, DE",
+    50.9094501,
+    6.4052444
   ],
   [
-    "Conference Proceeding talk 3 on Relevant Topic in Your Field<br />Testing Institute of America 2014 Annual Conference; Los Angeles, CA, USA",
-    34.0536909,
-    -118.242766
+    "An Adaptive Asynchronous Approach for the Single-Source Shortest Paths Problem<br />IA^3 at SC24; Atlanta, GA, USA",
+    33.7608167,
+    -84.4030505
   ],
   [
-    "Talk 1 on Relevant Topic in Your Field<br />UC San Francisco, Department of Testing; San Francisco, CA, USA",
-    37.7792588,
-    -122.4193286
+    "Charm4Py: A Programming Model for Distributed Adaptive Python<br />IPDPS 2026; New Orleans, LA, USA",
+    29.9527512,
+    -90.0681347
   ]
 ];
