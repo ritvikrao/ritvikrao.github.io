@@ -15,4 +15,4 @@ I also conduct research on the design of task-based runtimes. I am the primary d
 
 This page is under construction
 ------
-I will eventually add my papers, talks, my CV, and my picture to this page. Until then, everything else you see on this site is a placeholder.
+I will eventually add my papers, my CV, and my picture to this page. Until then, everything else you see on this site is a placeholder.
