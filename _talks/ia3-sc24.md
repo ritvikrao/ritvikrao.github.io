@@ -8,6 +8,8 @@ date: 2024-11-17
 location: "Atlanta, GA, USA"
 ---
 
+[Slides (PDF)](/files/acic-ia3-sc24-slides.pdf)
+
 Large-scale graphs with billions and trillions of ver-
 tices and edges require efficient parallel algorithms for common
 graph problems, one of which is single-source shortest paths

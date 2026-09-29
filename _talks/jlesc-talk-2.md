@@ -8,6 +8,8 @@ date: 2026-05-20
 location: "Julich, DE"
 ---
 
+[Slides (PDF)](/files/jlesc2026-charm4py-slides.pdf)
+
 While high-performance computing traditionally consisted of CSE and large scientific applications, modern applications like data analytics and machine learning have now become more prominent. These new applications contain some of the same challenges as previous HPC workloads, including a need to deal with runtime variability and adaptation. As the focus in ML shifts from model-building via massive training to inference and large-scale serving, and as issues such as energy consumption and resource utilization gain importance, runtime adaptivity will become important for these domains as well. The increasing use of cloud infrastructure also emphasizes resource elasticity as well as resource heterogeneity, along with multi-tenancy. To solve these issues, we propose the use of Charm4Py, CharmTyles, and CharmNumerics, which build off the proven capabilities of the Charm++ parallel runtime system, but target data science and machine learning, along with Python-based CSE applications.
 
 Charm4Py is a Python-based runtime system based on overdecomposition, which builds on top of Charm++. Charm4Py, like Charm++, is targeted towards traditional HPC applications, but combines the use of popular Python libraries with dynamic load balancing and computation-communication overlap. Charm4Py can also be used as an alternative to existing Python runtimes. In particular, we have developed an implementation of the Ray core API on top of Charm4Py, which allows existing Ray programs to use dynamic load balancing by representing Ray actors as Charm4Py chares, all without requiring any modification to existing Ray programs.
