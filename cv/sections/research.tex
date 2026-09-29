@@ -1,0 +1,39 @@
+\section{Research Experience}
+
+\entry{Graduate Researcher}{2022 -- present}
+  {Parallel Programming Laboratory, University of Illinois Urbana-Champaign}{Urbana, IL}
+\begin{itemize}
+  \item Primary designer of \href{https://github.com/charmplusplus/reconverse}{Reconverse},
+    a scheduling and communication layer replacing Charm++'s 30-year-old Converse, with
+    lottery-queue scheduling, queue registration, and an LCI machine layer; up to
+    2$\times$ speedups on large-scale applications
+  \item Developed ACIC, an adaptive asynchronous shortest-path algorithm for high-diameter
+    graphs with tens of billions of vertices, up to two orders of magnitude faster than
+    existing distributed graph frameworks
+  \item Accelerated friends-of-friends cluster finding for cosmological simulations by
+    combining tree-traversal and union-find libraries with fine-grained optimizations
+    for highly imbalanced datasets
+  \item Implemented the Ray Core API on top of
+    \href{https://github.com/charmplusplus/charm4py}{Charm4Py}, letting unmodified Ray
+    programs use dynamic load balancing by mapping Ray actors to Charm4Py chares;
+    3--4$\times$ speedups on Ray benchmarks over the standard Ray runtime
+  \cvonly{\item Built a library of graph algorithms for CharmTyles, an interactive
+    computing interface to Charm++ aimed at data scientists}
+\end{itemize}
+\cvonly{%
+\entrygap
+
+\entry{Undergraduate Researcher, Julia on AMD GPUs}{June 2021 -- June 2022}
+  {NUCAR Lab, Northeastern University}{Boston, MA}
+\begin{itemize}
+  \item Designed an interface that translates Julia GPU code to HIP for AMD's ROCm
+    platform, allowing Oceananigans, an ocean climate model written in Julia, to run on
+    AMD GPUs
+\end{itemize}
+\entrygap
+
+\entry{Pi-Tiles}{Jan.\ 2019 -- Apr.\ 2019}{NUCAR Lab, Northeastern University}{Boston, MA}
+\begin{itemize}
+  \item Implemented blocked matrix multiplication in MPI across a cluster of Raspberry
+    Pis, 10$\times$ faster than the naive method
+\end{itemize}}

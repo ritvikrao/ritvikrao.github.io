@@ -1,0 +1,122 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{cvstyle}[2026/09/29 Shared style for the CV and resume]
+
+% ---- Modes -------------------------------------------------------------
+% resume: load as \usepackage[resume]{cvstyle}. Sections check \ifresume to
+%         trim themselves down.
+% public: `make public` defines \cvpublic before the document starts. Public
+%         builds never read personal.tex, so the address and phone number
+%         cannot reach the PDF.
+\newif\ifresume
+\DeclareOption{resume}{\resumetrue}
+\ProcessOptions\relax
+
+\newif\ifpublic
+\ifdefined\cvpublic \publictrue \fi
+
+% ---- Page and fonts ----------------------------------------------------
+\RequirePackage[T1]{fontenc}
+\RequirePackage{XCharter}
+\ifresume
+  \RequirePackage[letterpaper, margin=0.5in]{geometry}
+  \pagestyle{empty}
+\else
+  \RequirePackage[letterpaper, margin=0.8in]{geometry}
+  \pagestyle{plain}
+\fi
+\RequirePackage{xcolor}
+\RequirePackage{enumitem}
+\RequirePackage{titlesec}
+\RequirePackage{hyperref}
+
+\definecolor{accent}{HTML}{1F3A5F}
+\hypersetup{colorlinks, urlcolor=accent, linkcolor=accent,
+  pdfauthor={Ritvik Rao}, pdftitle={Ritvik Rao -- \ifresume Resume\else CV\fi}}
+
+\setlength{\parindent}{0pt}
+\setcounter{secnumdepth}{0}
+\raggedbottom
+
+\titleformat{\section}{\large\scshape\color{accent}}{}{0pt}{}
+  [\vspace{0.3ex}{\color{accent}\titlerule}]
+\ifresume
+  \titlespacing*{\section}{0pt}{1.0ex}{0.5ex}
+\else
+  \titlespacing*{\section}{0pt}{2ex}{1ex}
+\fi
+\titleformat{\subsection}{\normalsize\itshape}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{1ex}{0.5ex}
+
+\setlist[itemize]{label=\textbullet, nosep, leftmargin=1.2em, topsep=0.2ex}
+
+% \cvonly{...} drops content from the resume; \resumeonly{...} is the reverse.
+\newcommand{\cvonly}[1]{\ifresume\else#1\fi}
+\newcommand{\resumeonly}[1]{\ifresume#1\fi}
+
+% Unfinished content shows up in red so it can't be missed.
+\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
+
+% ---- Personal info -----------------------------------------------------
+\newif\ifhavepersonal
+\ifpublic\else
+  \IfFileExists{personal.tex}
+    {\input{personal.tex}\havepersonaltrue}
+    {\PackageWarningNoLine{cvstyle}{personal.tex not found; building without
+      address and phone (copy personal.example.tex to personal.tex)}}
+\fi
+
+% ---- Header ------------------------------------------------------------
+\newcommand{\cvsep}{\enspace\textperiodcentered\enspace}
+\newcommand{\makeheader}{%
+  \begin{center}
+    {\Huge\scshape Ritvik Rao}\\[1.2ex]
+    \ifhavepersonal \homeaddress\cvsep\phonenumber\\[0.3ex]\fi
+    \href{mailto:rsrao2@illinois.edu}{rsrao2@illinois.edu}\cvsep
+    \href{https://ritvikrao.github.io}{ritvikrao.github.io}\cvsep
+    \href{https://github.com/ritvikrao}{github.com/ritvikrao}\cvsep
+    \href{https://orcid.org/0009-0002-9197-3846}{ORCID 0009-0002-9197-3846}
+  \end{center}
+  \vspace{-1ex}}
+
+% ---- Entries -----------------------------------------------------------
+% Space between consecutive entries in a section.
+\newcommand{\entrygap}{\vspace{\ifresume 0.4ex\else 0.8ex\fi}}
+
+% \entry{role or degree}{dates}{organization}{location}
+\newcommand{\entry}[4]{%
+  \textbf{#1}\hfill #2\par
+  \if\relax\detokenize{#3#4}\relax\else \textit{#3}\hfill\textit{#4}\par\fi
+  \vspace{0.2ex}}
+
+% \dated[date width]{text}{date}: one list line with the date flush right.
+% Widen the date column for long ranges, e.g. \dated[12.5em]{...}{Spring 2024 -- Spring 2026}.
+\NewDocumentCommand{\dated}{O{6.5em} m m}{%
+  \parbox[t]{\dimexpr\linewidth-#1-0.5em}{\raggedright #2}\hfill
+  \parbox[t]{#1}{\raggedleft #3}\par\vspace{0.6ex}}
+
+% \skill{category}{items}
+\newcommand{\skill}[2]{{\raggedright\textbf{#1:} #2\par}\vspace{0.3ex}}
+
+% ---- Publications ------------------------------------------------------
+% \pubgroup{heading}{label prefix} starts a group, e.g. [J1], [C1].
+% \pub{...}  appears in the CV only.
+% \pub*{...} is "selected" and appears in the resume too.
+% \venue{full name}{short name}: the resume prints the short one.
+\newcommand{\me}{\textbf{Ritvik Rao}}
+\newcommand{\venue}[2]{\ifresume\textit{#2}\else\textit{#1}\fi}
+\newcounter{pubnum}
+\newcommand{\pubprefix}{}
+\newlength{\publabelwidth}
+\ifresume \setlength{\publabelwidth}{1.2em}\else \setlength{\publabelwidth}{2.6em}\fi
+\newcommand{\pubgroup}[2]{%
+  \ifresume\else\subsection{#1}\fi
+  \renewcommand{\pubprefix}{#2}\setcounter{pubnum}{0}}
+\newcommand{\printpub}[1]{%
+  \stepcounter{pubnum}%
+  \par\hangindent=\publabelwidth\hangafter=1
+  \makebox[\publabelwidth][l]{\ifresume\textbullet\else[\pubprefix\arabic{pubnum}]\fi}%
+  #1\par\vspace{\ifresume 0.3ex\else 0.6ex\fi}}
+\NewDocumentCommand{\pub}{s m}{%
+  \IfBooleanTF{#1}{\printpub{#2}}{\ifresume\else\printpub{#2}\fi}}
+
+\endinput
