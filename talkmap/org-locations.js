@@ -18,5 +18,10 @@ var addressPoints = [
     "Charm4Py: A Programming Model for Distributed Adaptive Python<br />IPDPS 2026; New Orleans, LA, USA",
     29.9527512,
     -90.0681347
+  ],
+  [
+    "Benchmarking and developing NAMD With Charm++ and Reconverse<br /> NAMD Developers Workshop 2026; Chicago, IL, USA",
+    41.7912269,
+    -87.6009269
   ]
 ];
