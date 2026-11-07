@@ -23,7 +23,7 @@ repository               : "ritvikrao/ritvikrao.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpg"
   name             : "Ritvik Rao"
   pronouns         : # example: "she/her"  
   bio              : "C.S Ph.D student at UIUC interested in HPC and task-based runtime systems"
