@@ -1,0 +1,31 @@
+---
+title: "Reconverse: A New Scheduling Library for Multithreaded Task-Based Runtime Systems"
+collection: talks
+type: "Talk"
+permalink: /talks/pawatm-sc26
+venue: "PAW-ATM at SC26"
+date: 2026-11-15
+location: "Chicago, IL, USA"
+---
+
+[Slides (PDF)](/files/reconverse-pawatm-talk.pdf)
+
+Task-based runtime systems, including Charm++,
+provide benefits not available with MPI, such as dynamic load
+balancing and automatic computation-communication overlap.
+Charm++ is currently built on top of an old scheduling layer
+called Converse. However, Converse lacks many features that are
+essential for distributed multithreaded performance, and other
+programming models cannot directly use the Converse scheduler.
+To solve these problems, we present Reconverse, a new scheduling
+layer for task-based runtime systems. Reconverse is a separately
+compiled library that can be linked to Charm++ or other runtime
+systems. Compared to Converse, Reconverse contains experi-
+mental features for optimizing fine-grained applications such as
+lottery queue scheduling. Reconverse also supports new machine
+layers such as LCI, a new communication layer for multithreaded
+runtime systems. We show that Reconverse improves perfor-
+mance compared to Converse on multiple benchmarks and also
+demonstrates speedups of up to 2x on large-scale applications,
+showing the benefits of Reconverse for multithreaded distributed
+workloads.

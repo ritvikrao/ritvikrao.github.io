@@ -23,5 +23,15 @@ var addressPoints = [
     "Benchmarking and developing NAMD With Charm++ and Reconverse<br /> NAMD Developers Workshop 2026; Chicago, IL, USA",
     41.7912269,
     -87.6009269
+  ],
+  [
+    "Efficient Cosmological Friends-of-Friends Computation with Fine-Grained Optimizations<br />IA^3 at SC26; Chicago, IL, USA",
+    41.8523222, 
+    -87.6214384
+  ],
+  [
+    "Reconverse: A New Scheduling Library for Multithreaded Task-Based Runtime Systems<br />PAW-ATM at SC26; Chicago, IL, USA",
+    41.8523222, 
+    -87.6214384
   ]
 ];
