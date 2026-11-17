@@ -7,7 +7,7 @@ excerpt: 'We present a series of fine-grained optimizations to a parallel friend
 date: 2026-11-15
 venue: '16th IEEE/ACM Workshop on Irregular Applications: Architectures and Algorithms (IA<sup>3</sup>), held in conjunction with SC26 — accepted, to appear'
 paperurl: '/files/cosmological-fof.pdf'
-citation: 'Ritvik Rao and Laxmikant Kalé. (2026). &quot;Efficient Cosmological Friends-of-Friends Computation with Fine-Grained Optimizations.&quot; <i>16th IEEE/ACM Workshop on Irregular Applications: Architectures and Algorithms (IA3), held in conjunction with SC26</i>. To appear.'
+citation: 'Ritvik Rao and Laxmikant Kalé. (2026). &quot;Efficient Cosmological Friends-of-Friends Computation with Fine-Grained Optimizations.&quot; <i>16th IEEE/ACM Workshop on Irregular Applications: Architectures and Algorithms (IA3), held in conjunction with SC26</i>.'
 bibtex: |
   @inproceedings{rao2026fof,
     title={Efficient Cosmological Friends-of-Friends Computation with Fine-Grained Optimizations},

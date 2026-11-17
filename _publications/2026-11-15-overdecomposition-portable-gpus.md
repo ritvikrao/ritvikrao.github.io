@@ -7,7 +7,7 @@ excerpt: 'We show that overdecomposition can be sustained efficiently and portab
 date: 2026-11-15
 venue: '9th Annual Parallel Applications Workshop, Alternatives To MPI+X (PAW-ATM), held in conjunction with SC26 — accepted, to appear'
 paperurl: '/files/overdecomposition-portable-gpus.pdf'
-citation: 'Aditya Bhosale, Anant Jain, Shourya Goel, Ritvik Rao, Peddoju Sateesh Kumar, and Laxmikant Kalé. (2026). &quot;Efficient and Portable Support for Overdecomposition on Distributed GPU Platforms.&quot; <i>9th Annual Parallel Applications Workshop, Alternatives To MPI+X (PAW-ATM), held in conjunction with SC26</i>. To appear.'
+citation: 'Aditya Bhosale, Anant Jain, Shourya Goel, Ritvik Rao, Peddoju Sateesh Kumar, and Laxmikant Kalé. (2026). &quot;Efficient and Portable Support for Overdecomposition on Distributed GPU Platforms.&quot; <i>9th Annual Parallel Applications Workshop, Alternatives To MPI+X (PAW-ATM), held in conjunction with SC26</i>.'
 bibtex: |
   @inproceedings{bhosale2026overdecomposition,
     title={Efficient and Portable Support for Overdecomposition on Distributed GPU Platforms},

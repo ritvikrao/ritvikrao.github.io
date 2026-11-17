@@ -7,7 +7,7 @@ excerpt: 'We present Reconverse, a new scheduling library for task-based runtime
 date: 2026-11-15
 venue: '9th Annual Parallel Applications Workshop, Alternatives To MPI+X (PAW-ATM), held in conjunction with SC26 — accepted, to appear'
 paperurl: '/files/reconverse-scheduling.pdf'
-citation: 'Ritvik Rao, Jiakun Yan, Aditya Bhosale, and Laxmikant Kalé. (2026). &quot;Reconverse: A New Scheduling Library for Multithreaded Task-Based Runtime Systems.&quot; <i>9th Annual Parallel Applications Workshop, Alternatives To MPI+X (PAW-ATM), held in conjunction with SC26</i>. To appear.'
+citation: 'Ritvik Rao, Jiakun Yan, Aditya Bhosale, and Laxmikant Kalé. (2026). &quot;Reconverse: A New Scheduling Library for Multithreaded Task-Based Runtime Systems.&quot; <i>9th Annual Parallel Applications Workshop, Alternatives To MPI+X (PAW-ATM), held in conjunction with SC26</i>.'
 bibtex: |
   @inproceedings{rao2026reconverse,
     title={Reconverse: A New Scheduling Library for Multithreaded Task-Based Runtime Systems},
